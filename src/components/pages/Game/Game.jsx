@@ -9,7 +9,7 @@ const [level,setLevel]=useState(0)
 const [gameTime,setGameTime]=useState({})
 
 useEffect(()=>{
-  alert("Welcome To The Game")
+  // alert("Welcome To The Game")
 },[])
 
 useEffect(()=>{
@@ -20,7 +20,7 @@ useEffect(()=>{
 setGameTime(new Date())
 },[])
 useEffect(()=>{
-    alert("the game is over")
+    // alert("the game is over")
   },[gameTime])
   
 
