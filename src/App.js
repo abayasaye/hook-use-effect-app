@@ -5,6 +5,7 @@ import Football from './components/pages/Football/Football';
 import Basketball from './components/pages/Basketball/Basketball';
 import { useState } from 'react';
 import Router from './components/pages/Router/Router';
+import Desk from './components/pages/Desk';
 const changeArray = [1,2,3]
 const App = ()=>{
   const [change,setChange]=useState(1)
@@ -59,7 +60,8 @@ return(
       changeArray.map((i) => <button onClick={()=>setChange(i)}>{i}</button>
 )
     }
-
+    <hr/>
+<Desk number={1}/>
   </div>
 )
 }

@@ -13,7 +13,7 @@ useEffect(()=>{
 },[])
 
 useEffect(()=>{
-  c("Start The Game")
+  // c("Start The Game")
 },[level])
 
 useEffect(()=>{
