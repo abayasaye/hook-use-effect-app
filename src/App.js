@@ -8,9 +8,11 @@ import Desk from './components/pages/Desk';
 import { BrowserRouter , Link } from 'react-router-dom';
 import Router from './components/pages/Router/Router';
 import PageNotFound from './components/pages/page-not-found/Page-not-found';
+import Header from './components/features/Header/Header';
+import Footer from './components/features/Footer/Footer';
+import Navbar from './components/pages/Navbar/Navbar';
 // const changeArray = [1,2,3]
 
-export const pages = ["Game","Football","Basketball" ,"Page-not-found"]
 const App = ()=>{
 //   const [change,setChange]=useState(1)
 //   const [pageSwap,setPageSwap]=useState("Game")
@@ -66,17 +68,14 @@ return(
     {/* } */}
     {/* <hr/> */}
 {/* <Desk number={1}/> */}
-
 <BrowserRouter>
+<Header/>
+
 <Router/>
-{
-  pages.map(pagePath=>
-  <Link to={pagePath}><button>{pagePath}</button></Link>
-  )
-}
 
+
+<Footer/>
 </BrowserRouter>
-
 
 
 

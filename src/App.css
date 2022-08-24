@@ -39,3 +39,24 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.page-not-found{
+  background-color: #FFE2A2;
+}
+#gifff{
+  width: auto;
+  height: auto;
+}
+
+#header{
+  background-color: #E4EAC7;
+  width: 100vw;
+  height: 10vh;
+  position: fixed ;
+}
+#footer{
+  background-color: #EFF8F9;
+  position: sticky;
+  bottom:0;
+  height: 30vh;
+}

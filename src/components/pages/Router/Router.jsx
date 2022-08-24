@@ -10,12 +10,11 @@ import PageNotFound from "../page-not-found/Page-not-found";
 function Router() {
   return (
     <div className="router">
-      <h1>ROUTER-COMPONENT</h1>
       <Routes>
-        <Route path="/" element={<Game />}></Route>
+        <Route path="/Game" element={<Game />}></Route>
         <Route path="/Football" element={<Football />}></Route>
         <Route path="/Basketball" element={<Basketball />}></Route>
-        <Route path="/Page-not-found" element={<PageNotFound />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </div>
   );
