@@ -1,48 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
-import Game from './components/pages/Game/Game';
-import Football from './components/pages/Football/Football';
-import Basketball from './components/pages/Basketball/Basketball';
+// import Game from './components/pages/Game/Game';
+// import Football from './components/pages/Football/Football';
+// import Basketball from './components/pages/Basketball/Basketball';
 import { useState } from 'react';
-import Router from './components/pages/Router/Router';
 import Desk from './components/pages/Desk';
-const changeArray = [1,2,3]
+import { BrowserRouter , Link } from 'react-router-dom';
+import Router from './components/pages/Router/Router';
+import PageNotFound from './components/pages/page-not-found/Page-not-found';
+// const changeArray = [1,2,3]
+
+export const pages = ["Game","Football","Basketball" ,"Page-not-found"]
 const App = ()=>{
-  const [change,setChange]=useState(1)
-  const [pageSwap,setPageSwap]=useState("Game")
+//   const [change,setChange]=useState(1)
+//   const [pageSwap,setPageSwap]=useState("Game")
 
-const PagesChanger = ()=>{
-  switch (pageSwap) {
-    case "Game":
+// const PagesChanger = ()=>{
+//   switch (pageSwap) {
+//     case "Game":
       
-    return <Game/>;
-    case "Football":
+//     return <Game/>;
+//     case "Football":
       
-    return <Football/>;
-    case "Basketball":
+//     return <Football/>;
+//     case "Basketball":
       
-    return <Basketball/>;
+//     return <Basketball/>;
   
-    default:
-      break;
-  }
-}
+//     default:
+//       break;
+//   }
+// }
 
-  const SwitchPages = ()=>{
-      switch (change) {
-        case 1:
-          return <Game/>;
-        case 2:
-        return <Football/>;
-        case 3:
-          return <Basketball/>;
-        default:
-          break;
-      }
-  }
+//   const SwitchPages = ()=>{
+//       switch (change) {
+//         case 1:
+//           return <Game/>;
+//         case 2:
+//         return <Football/>;
+//         case 3:
+//           return <Basketball/>;
+//         default:
+//           break;
+//       }
+//   }
 return(
   <div>
-    <h1>COMPONENTS</h1>
+    {/* <h1>COMPONENTS</h1>
     <h1>{change}</h1>
     <button onClick={()=>setChange(1)}>CLICK-TO-1</button>
     <button onClick={()=>setChange(2)}>CLICK-TO-2</button>
@@ -53,16 +57,31 @@ return(
     <button onClick={()=>setPageSwap("Football")} >CHANGE-TO-FOOTBALL</button>
     <button onClick={()=>setPageSwap("Basketball")} >CHANGE-TO-BASKETBALL</button>
     {/* <button onClick={changeUp}>CHANGE-NUMBER</button> */}
-    <PagesChanger/>
-    <hr/>
-    <Router count={change}/>
-    {
-      changeArray.map((i) => <button onClick={()=>setChange(i)}>{i}</button>
-)
-    }
-    <hr/>
-<Desk number={1}/>
+    {/* <PagesChanger/> */}
+    {/* <hr/> */}
+    {/* <Router count={change}/> */}
+    {/* { */}
+      {/* changeArray.map((i) => <button onClick={()=>setChange(i)}>{i}</button> */}
+{/* ) */}
+    {/* } */}
+    {/* <hr/> */}
+{/* <Desk number={1}/> */}
+
+<BrowserRouter>
+<Router/>
+{
+  pages.map(pagePath=>
+  <Link to={pagePath}><button>{pagePath}</button></Link>
+  )
+}
+
+</BrowserRouter>
+
+
+
+
   </div>
+
 )
 }
 export default App
