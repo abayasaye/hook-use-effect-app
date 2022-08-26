@@ -1,14 +1,12 @@
 import "./game.css";
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { useContext } from "react";
-import {myContext} from "../Router/Router";
+import { useEffect ,useState,useContext} from "react";
+import { myContext } from "../../../contexts/DeviceContext";
 
 const c = console.log;
 const date = new Date();
 function Game() {
   const newText = useContext(myContext);
-
+c(newText)
   const [level, setLevel] = useState(0);
 
   const [gameTime, setGameTime] = useState({});
@@ -38,11 +36,11 @@ function Game() {
   return (
     <div className="game">
       <h1>GAME-COMPONENT</h1>
-      {c(newText)}
       <h1>{level}</h1>
       <button onClick={levelUp}>LEVEL-UP</button>
       <button onClick={changeGameTime}>change-time</button>
       <h1>{}</h1>
+
     </div>
   );
 }

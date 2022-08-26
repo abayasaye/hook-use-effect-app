@@ -6,34 +6,64 @@ import Football from "../Football";
 import Basketball from "../Basketball";
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from "../page-not-found/Page-not-found";
-
-import { useEffect } from "react";
-import { createContext } from "react";
-import { useState } from "react";
+import DevicesProvider from "../../../contexts/DeviceContext";
 const c = console.log;
-export const myContext = createContext();
+
 function Router() {
-  const [devices, setDevices] = useState([]);
-  useEffect(() => {
-    fetch("https://my-json-server.typicode.com/Jeck99/fake-server/devices")
-      .then((res) => res.json())
-      .then((result) => setDevices(result));
-  }, []);
+
   return (
     <div className="router">
-      <myContext.Provider value={{ devices, setDevices }}>
+      <DevicesProvider>
         <Routes>
           <Route path="/Game" element={<Game />}></Route>
           <Route path="/Football" element={<Football />}></Route>
           <Route path="/Basketball" element={<Basketball />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
-      </myContext.Provider>
+        </DevicesProvider>
     </div>
   );
 }
 
 export default Router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function Router({count}) {
 //   switch (count) {
