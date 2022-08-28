@@ -4,6 +4,7 @@ import React from "react";
 import Game from "../Game";
 import Football from "../Football";
 import Basketball from "../Basketball";
+// import DeviceScreen from "../DeviceScreen/DeviceScreen";
 import { Routes, Route } from "react-router-dom";
 import PageNotFound from "../page-not-found/Page-not-found";
 import DevicesProvider from "../../../contexts/DeviceContext";
@@ -18,7 +19,7 @@ function Router() {
           <Route path="/Game" element={<Game />}></Route>
           <Route path="/Football" element={<Football />}></Route>
           <Route path="/Basketball" element={<Basketball />}></Route>
-          <Route path="/Basketball" element={<Basketball />}></Route>
+          {/* <Route path="/DeviceScreen" element={<DeviceScreen />}></Route> */}
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
         </DevicesProvider>

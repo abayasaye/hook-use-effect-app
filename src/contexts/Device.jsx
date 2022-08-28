@@ -1,4 +1,4 @@
-import { createContext, useState ,useEffect} from "react";
+import { createContext, useState, useEffect } from "react";
 import DeviceScreen from "../components/pages/DeviceScreen/DeviceScreen";
 import getDevices from "../services/devices";
 
@@ -7,9 +7,8 @@ export const deviceContext = createContext();
 const Devices = () => {
   const [device, setDevice] = useState([]);
   useEffect(() => {
-    getDevices()
-      .then((result) => setDevice(result));
-      console.log(device);
+    getDevices().then((result) => setDevice(result));
+    console.log(device);
   }, []);
 
   return (

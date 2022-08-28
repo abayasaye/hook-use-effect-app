@@ -2,6 +2,7 @@ import "./deviceScreen.css";
 import React from "react";
 import { useContext } from "react";
 import { deviceContext } from "../../../contexts/device";
+import DevicesCard from "../DevicesCard/DevicesCard";
 
 function DeviceScreen() {
   const {device , setDevice} = useContext(deviceContext);
@@ -10,7 +11,7 @@ function DeviceScreen() {
       <div className="device-screen">
         {
           device?.map(DeviceItem=>
-            <DeviceScreen device={DeviceItem}/>
+            <DevicesCard device={DeviceItem}/>
             )
         }
       </div>
