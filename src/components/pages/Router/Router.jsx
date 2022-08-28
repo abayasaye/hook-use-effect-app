@@ -18,6 +18,7 @@ function Router() {
           <Route path="/Game" element={<Game />}></Route>
           <Route path="/Football" element={<Football />}></Route>
           <Route path="/Basketball" element={<Basketball />}></Route>
+          <Route path="/Basketball" element={<Basketball />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
         </DevicesProvider>
