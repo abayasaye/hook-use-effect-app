@@ -1,11 +1,10 @@
 import "./movies.css";
-import React from "react";
 import { useContext } from "react";
 import {MovieContext} from "../../../contexts/movie.context";
 import MovieCards from "../MovieCards/MovieCards";
 
 function Movies() {
-  const {moviesArray , setMovieArray} = useContext(MovieContext);
+  const {moviesArray , setMoviesArray} = useContext(MovieContext);
   return (
       <MovieContext>
     <div className="movies">
