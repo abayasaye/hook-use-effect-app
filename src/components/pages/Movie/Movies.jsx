@@ -6,7 +6,7 @@ import MovieCards from "../MovieCards/MovieCards";
 function Movies() {
   const {moviesArray , setMoviesArray} = useContext(MovieContext);
   return (
-      <MovieContext>
+  
     <div className="movies">
       <h1>Movies</h1>
       {
@@ -14,9 +14,7 @@ function Movies() {
         <MovieCards moviesArray={movieItem}/>
         )
       }
-
     </div>
-      </MovieContext>
   );
 };
 

@@ -1,5 +1,5 @@
 import "./moviesTabale.css";
-import 
+
 
 function MoviesTabale() {
   return (

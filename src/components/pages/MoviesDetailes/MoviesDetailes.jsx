@@ -7,11 +7,9 @@ function MoviesDetailes() {
 
 
   return (
-    <MovieContext>
     <div className="movies-detailes">
       <h1>MoviesDetailes</h1>
     </div>
-    </MovieContext>
   );
 };
 
